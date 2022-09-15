@@ -1,5 +1,4 @@
 *{
-    background-color: black;
     margin: 0;
     padding: 0;
 }
@@ -28,7 +27,7 @@
 .nav-links ul li::after{
     content:'';
     width: 0%;
-    height: 2px;
+    height: 5px;
     background: red;
     display: block;
     margin: auto;
@@ -48,7 +47,7 @@
 #book-appointment::after{
     content:'';
     width: 0%;
-    height: 2px;
+    height: 5px;
     background: white;
     display: block;
     margin: auto;
@@ -58,13 +57,33 @@
     width: 80%;
 }
 /*-----------------Welcome Section--------------*/
+.welcome-page{
+    background-color: black;
+    position: relative;
+    text-align: center;
+    color:white;
+}
 .welcome-page img{
     height: 100%;
     width: 100%;
 }
 .welcome-page h1{
-    color: white;
-    font-size: 35px;
+    font-size: 65px;
+    position: absolute;
+    top: 50px;
+    right: 16px;
+}
+#estyear{
+    font-size: 50px;
+    position: absolute;
+    top: 130px;
+    right: 400px;
+}
+.welcome-page h2{
+    font-size: 45px;
+    position: absolute;
+    top: 200px;
+    right: 350px;
 }
 /*----------------Detailing Section Top----------*/
 .detailing-section-top{
