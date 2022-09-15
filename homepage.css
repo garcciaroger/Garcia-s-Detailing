@@ -1,0 +1,115 @@
+*{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+/*--------------------Header-----------------------*/
+.header{
+    background-color: black;
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+}
+.logo img{
+    height: 275px;
+    width: 275px;
+}
+.nav-links ul{
+    color: white;
+    padding: 50px;
+    padding-top: 100px;
+}
+.nav-links ul li{
+    display: inline-block;
+    font-size: 50px;
+    padding: 50px;
+    text-align: center;
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 80%;
+}
+#book-appointment{
+    background-color: red;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#book-appointment::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+#book-appointment:hover::after{
+    width: 80%;
+}
+/*-----------------Welcome Section--------------*/
+.welcome-page img{
+    height: 100%;
+    width: 100%;
+}
+.welcome-page h1{
+    color: white;
+    font-size: 35px;
+}
+/*----------------Detailing Section Top----------*/
+.detailing-section-top{
+    display: flex;
+    justify-content:space-around
+}
+.image1 img{
+    height: 800px;
+    width: 100%;
+}
+.image2 img{
+    height: 800px;
+    width: 100%;
+}
+/*--------------Detailing Section Bottom---------*/
+.detailing-section-bottom{
+    display: flex;
+    justify-content: space-around;
+}
+.image1 img{
+    height: 100%;
+    width: 100%;
+}
+.image2 img{
+    height: 100%;
+    width: 100%;
+}
+/*--------------About Us------------------------*/
+.about-us img{
+    width: 100%;
+    height: 100%;
+}
+/*--------------Contact Us-----------------------*/
+.contact-us img{
+    width: 100%;
+    height: 100%;
+}
+/*-------------Footer---------------------------*/
+.footer{
+    background-color: black;
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+}
+.footer img{
+    height: 275px;
+    width: 275px;
+}
