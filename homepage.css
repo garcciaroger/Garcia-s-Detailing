@@ -70,20 +70,20 @@
 .welcome-page h1{
     font-size: 65px;
     position: absolute;
-    top: 50px;
+    top: 175px;
     right: 16px;
 }
 #estyear{
     font-size: 50px;
     position: absolute;
-    top: 130px;
-    right: 400px;
+    top: 255px;
+    right: 200px;
 }
 .welcome-page h2{
-    font-size: 45px;
+    font-size: 50px;
     position: absolute;
-    top: 200px;
-    right: 350px;
+    top: 255px;
+    right: 450px;
 }
 /*----------------Detailing Section Top----------*/
 .detailing-section-top{
@@ -98,6 +98,25 @@
     height: 800px;
     width: 100%;
 }
+#topLeft {
+    color: white;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: red;
+    font-size: 75px;
+    top: 1050px;
+    right: 2000px;
+}
+#topRight{
+    color: white;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 5px;
+    font-size: 75px;
+    top: 1050px;
+    right: 400px;
+}
 /*--------------Detailing Section Bottom---------*/
 .detailing-section-bottom{
     display: flex;
@@ -111,15 +130,82 @@
     height: 100%;
     width: 100%;
 }
+#bottomLeft {
+    color: white;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: red;
+    position: absolute;
+    font-size: 75px;
+    top: 1850px;
+    right: 1950px;
+}
+#bottomRight{
+    color: white;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 5px;
+    font-size: 75px;
+    top: 1850px;
+    right: 250px;
+}
 /*--------------About Us------------------------*/
+.about-us{
+    background-color: black;
+    color: white;
+}
 .about-us img{
     width: 100%;
     height: 100%;
 }
+#header{
+    position: absolute;
+    font-size: 75px;
+    top: 2750px;
+    right: 1000px;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+#yearEsta{
+    position: absolute;
+    font-size: 55px;
+    top: 2830px;
+    right: 1155px;
+}
+.about-us p{
+    font-size: 50px;
+    position: absolute;
+    top: 2950px;
+    padding-left: 500px;
+    height: 500px;
+    width: 2100px;
+}
 /*--------------Contact Us-----------------------*/
+.contact-us{
+    color: white;
+}
 .contact-us img{
     width: 100%;
     height: 100%;
+}
+.contact-us h1{
+    position: absolute;
+    font-size: 85px;
+    top: 3800px;
+    right: 900px;
+}
+.contact-us h2{
+    position: absolute;
+    font-size: 75px;
+    top: 3950px;
+    right: 1200px;
+    background-color: red;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /*-------------Footer---------------------------*/
 .footer{
