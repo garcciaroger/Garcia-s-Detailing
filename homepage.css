@@ -5,22 +5,28 @@
 /*--------------------Header-----------------------*/
 .header{
     background-color: black;
-    display: flex;
-    justify-content:center;
-    padding: 10px;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    left: 10%;
+    top: 15%
 }
 .logo img{
-    height: 275px;
-    width: 275px;
+    height: 200px;
+    width: 200px;
+}
+.nav-links{
+    text-align: center;
 }
 .nav-links ul{
     color: white;
-    padding: 50px;
+    padding: 30px;
     padding-top: 100px;
 }
 .nav-links ul li{
     display: inline-block;
-    font-size: 50px;
+    font-size: 30px;
     padding: 50px;
     text-align: center;
 }
@@ -59,97 +65,93 @@
 /*-----------------Welcome Section--------------*/
 .welcome-page{
     background-color: black;
+    display: flex;
     position: relative;
-    text-align: center;
-    color:white;
+}
+.text h1{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    right: 1%;
+    top: 35%;
 }
 .welcome-page img{
     height: 100%;
     width: 100%;
 }
-.welcome-page h1{
-    font-size: 65px;
-    position: absolute;
-    top: 175px;
-    right: 16px;
-}
-#estyear{
-    font-size: 50px;
-    position: absolute;
-    top: 255px;
-    right: 200px;
-}
-.welcome-page h2{
-    font-size: 50px;
-    position: absolute;
-    top: 255px;
-    right: 450px;
-}
-/*----------------Detailing Section Top----------*/
-.detailing-section-top{
+/*----------------Detailing Section Top Right----------*/
+.detailing-container{
+    background-color: black;
     display: flex;
-    justify-content:space-around
+    position: relative;
 }
-.image1 img{
-    height: 800px;
-    width: 100%;
-}
-.image2 img{
-    height: 800px;
-    width: 100%;
-}
-#topLeft {
-    color: white;
-    position: absolute;
-    text-decoration: underline;
-    text-decoration-color: red;
-    font-size: 75px;
-    top: 1050px;
-    right: 2000px;
-}
-#topRight{
-    color: white;
-    position: absolute;
-    text-decoration: underline;
-    text-decoration-color: red;
-    text-decoration-thickness: 5px;
-    font-size: 75px;
-    top: 1050px;
-    right: 400px;
-}
-/*--------------Detailing Section Bottom---------*/
-.detailing-section-bottom{
+.topLeft{
+    position: relative;
     display: flex;
-    justify-content: space-around;
 }
-.image1 img{
+.topLeft img{
+    height: 100%;
+    width: 50%;
+    float: left;   
+}
+.topLeft h1{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    right: 20%;
+}
+.topRight{
+    position: relative;
+    display: flex;
+}
+.topRight img{
     height: 100%;
     width: 100%;
+    float: right;   
 }
-.image2 img{
+.topRight h1{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+/*----------Bottom Panel---------*/
+.bottomLeft{
+    position: relative;
+    display: flex;
+}
+.bottomLeft img{
+    height: 100%;
+    width: 50%;
+    float: left;   
+}
+.bottomLeft h1{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+.bottomRight{
+    position: relative;
+    display: flex;
+}
+.bottomRight img{
     height: 100%;
     width: 100%;
+    float: right;   
 }
-#bottomLeft {
+.bottomRight h1{
     color: white;
+    font-size: 35px;
     position: absolute;
-    text-decoration: underline;
-    text-decoration-color: red;
-    position: absolute;
-    font-size: 75px;
-    top: 1850px;
-    right: 1950px;
+    top: 15%;
+    left: 40%;
 }
-#bottomRight{
-    color: white;
-    position: absolute;
-    text-decoration: underline;
-    text-decoration-color: red;
-    text-decoration-thickness: 5px;
-    font-size: 75px;
-    top: 1850px;
-    right: 250px;
-}
+
 /*--------------About Us------------------------*/
 .about-us{
     background-color: black;
