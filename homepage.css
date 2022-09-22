@@ -103,6 +103,31 @@
     left: 20%;
     right: 20%;
 }
+.top-left-layer{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .50s;
+    float: left;
+}
+.top-left-layer:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 .topRight{
     position: relative;
     display: flex;
