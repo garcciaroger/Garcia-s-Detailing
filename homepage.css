@@ -41,7 +41,7 @@
     transition: 0.5s;
 }
 .nav-links ul li:hover::after{
-    width: 80%;
+    width: 100%;
 }
 #book-appointment{
     background-color: red;
@@ -61,7 +61,7 @@
     transition: 0.5s;
 }
 #book-appointment:hover::after{
-    width: 80%;
+    width: 100%;
 }
 /*-----------------Welcome Section--------------*/
 .welcome-page{
@@ -309,7 +309,7 @@ footer{
     transition: 0.5s;
 }
 .nav-links ul li:hover::after{
-    width: 80%;
+    width: 100%;
 }
 #book-appointment{
     background-color: red;
@@ -329,5 +329,5 @@ footer{
     transition: 0.5s;
 }
 #book-appointment:hover::after{
-    width: 80%;
+    width: 100%;
 }
