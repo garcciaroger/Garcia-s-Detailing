@@ -63,3 +63,62 @@
 #book-appointment:hover::after{
     width: 100%;
 }
+footer{
+    background-color: black;
+    position: relative;
+}
+.logo-footer{
+    position: absolute;
+    left: 10%;
+    top: 15%
+}
+.logo-footer img{
+    height: 200px;
+    width: 200px;
+}
+.nav-links{
+    text-align: center;
+}
+.nav-links ul{
+    color: white;
+    padding: 30px;
+    padding-top: 100px;
+}
+.nav-links ul li{
+    display: inline-block;
+    font-size: 30px;
+    padding: 50px;
+    text-align: center;
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 5px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+#book-appointment{
+    background-color: red;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#book-appointment::after{
+    content:'';
+    width: 0%;
+    height: 5px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+#book-appointment:hover::after{
+    width: 100%;
+}
