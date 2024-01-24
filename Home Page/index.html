@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+    <script src="main.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -65,8 +66,17 @@
     </div>
     <!--Social Media-->
     <section class="social-media-page">
-
+        <div class="section-header">
+            <h2>Connect with Us on Social Media</h2>
+        </div>
+        <div class="social-media-links">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <!-- Add more social media links as needed -->
+        </div>
     </section>
+    
     <!--Veiw Service-->
     <section class="service">
         <div class="service-header">
@@ -152,12 +162,25 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
     
-                <button type="button" onclick="sendEmail()">Contact Us</button>
+                <button type="button" onclick="sendEmail()">Send Email</button>
             </form>
         </div>
     </div>
-    
-    
     <!--Footer-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img id="footer_logo" src="Images/image12.png" style="width: 150px; height: auto;">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
