@@ -75,7 +75,7 @@
         <div class="service-grid-container">
             <div class="service-grid-item1">
                 <img id = "top-left-image" src = "Images/noah-boyer-TLaEVVWB6yU-unsplash.jpg">
-                <div class="grid-overlay">
+                <div class="service-grid-textbox">
                     <h1>Hand Wash</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -86,7 +86,7 @@
             </div>
             <div class="service-grid-item1">
                 <img id = "top-right-image" src = "Images/jorgen-hendriksen-HsB4t2NvtLo-unsplash.jpg">
-                <div class="grid-overlay">
+                <div class="service-grid-textbox">
                     <h1>Interior Detail</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -97,7 +97,7 @@
             </div>
             <div class="service-grid-item1">
                 <img id = "bottom-left-image" src = "Images/nick-fewings-Hf-UoMSx6R0-unsplash.jpg">
-                <div class="grid-overlay">
+                <div class="service-grid-textbox">
                     <h1>Ceramic Coating</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -108,7 +108,7 @@
             </div>
             <div class="service-grid-item1">
                 <img id = "bottom-right-image" src = "Images/redcharlie-mugDbuNnbd0-unsplash.jpg">
-                <div class="grid-overlay">
+                <div class="service-grid-textbox">
                     <h1>Paint Correction</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -142,9 +142,21 @@
     <div class="contact-us">
         <div class="contact-us-textbox">
             <h1>Have Any Questions? Contact us</h1>
-            <button>Contact Us</button>
+            <form action="/submit_contact_form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Contact Us</button>
+            </form>
         </div>
     </div>
+    
     <!--Footer-->
 </body>
 </html>
