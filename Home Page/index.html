@@ -142,7 +142,7 @@
     <div class="contact-us">
         <div class="contact-us-textbox">
             <h1>Have Any Questions? Contact us</h1>
-            <form action="/submit_contact_form" method="post">
+            <form id="contactForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
     
@@ -152,10 +152,11 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
     
-                <button type="submit">Contact Us</button>
+                <button type="button" onclick="sendEmail()">Contact Us</button>
             </form>
         </div>
     </div>
+    
     
     <!--Footer-->
 </body>
