@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*-----------------------------------------------------------Header--------------------*/
+.header {
+    background-image: url(Images/tyler-clemmensen-Zs_L-plsZzg-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+/* Logo */
+.logo {
+    margin-left: 200px;
+    margin-top: 50px;
+    position: absolute;
+}
+/*------------------------------------------------Navigation Links*--------------------*/
+.nav-links {
+    text-align: center;
+    margin-top: 0px; 
+}
+.nav-links ul {
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: center; 
+}
+.nav-links ul li {
+    margin: 125px; 
+    font-size: 40px;
+}
+.nav-links ul li:hover {
+    text-decoration: underline;
+}
+/*-------------------------------------------------------------Contact Us*/
+.contact-us {
+    background-image: url(Images/j-z-CXqzqEq2sGU-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us-textbox {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #b81a1a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dd1010;
+}
+/*--------------------------------------------------Footer-------------------------*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 100px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo img {
+    width: 100%;
+    height: auto;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}

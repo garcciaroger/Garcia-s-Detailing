@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact-us.css">
+    <script src ="contact-us.js"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+    <!--Navigation Link-->
+    <section class="header">
+        <div class="logo">
+            <li style="width: 150px;"><img id="header_logo" src="Images/image12.png" style="width: 100%; height: auto;"></li>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+     <!--Contact Us-->
+     <div class="contact-us">
+        <div class="contact-us-textbox">
+            <h1>Have Any Questions? Contact us</h1>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="button" onclick="sendEmail()">Send Email</button>
+            </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img id="footer_logo" src="Images/image12.png" style="width: 150px; height: auto;">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
