@@ -18,7 +18,7 @@
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Services</li>
-                <li>Contact Us</li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -26,17 +26,21 @@
      <div class="contact-us">
         <div class="contact-us-textbox">
             <h1>Have Any Questions? Contact us</h1>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
+            <form action = "\send_email" method="post">
+                <label for="email">Form:</label>
+                <input type="email" name="from" id="from">
+
+                <label for="to">to:</label>
+                <input type="email" name="to" id="to">
+
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject">
+
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-    
-                <button type="button" onclick="sendEmail()">Send Email</button>
+                <textarea type="message" name="message"></textarea>
+
+                <input type="submit" value="Send">
+
             </form>
         </div>
     </div>

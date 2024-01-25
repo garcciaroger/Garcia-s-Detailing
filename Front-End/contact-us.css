@@ -4,11 +4,8 @@
 }
 /*-----------------------------------------------------------Header--------------------*/
 .header {
-    background-image: url(Images/tyler-clemmensen-Zs_L-plsZzg-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    min-height: 100vh;
+    background-color: black;
+    min-height: 1vh;
 }
 /* Logo */
 .logo {
