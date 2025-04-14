@@ -111,10 +111,6 @@ This project is MIT licensed.
 
 ## 📞 Contact
 
-- Website: [www.garciasdetailing.com](https://www.garciasdetailing.com)
-- Email: info@garciasdetailing.com
-- Phone: (555) 123-4567
-
 ---
 
 Made with ❤️ by Roger Garcia
