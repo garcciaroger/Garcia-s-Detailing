@@ -4,37 +4,57 @@
     <!-- Head -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Garcia's Detailing - Home</title>
 </head>
 <body>
     <!-- Navigation Link -->
-    <div class="header">
-        <div class="logo">
-            <li style="width: 150px;"><img id="header_logo" src="Images/image12.png" style="width: 100%; height: auto;"></li>
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img id="header_logo" src="Images/image12.png" alt="Garcia's Detailing Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about-us-section" class="nav-link">About Us</a></li>
+                    <li><a href="#services-section" class="nav-link">Services</a></li>
+                    <li><a href="#our-work" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact-us.html" class="nav-link cta-nav">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
+        <div class="hero-content">
+            <h1>Professional Auto Detailing</h1>
+            <p>Your vehicle deserves the best care</p>
+            <a href="#services-section" class="cta-button">Explore Our Services</a>
         </div>
-    </div>
+    </header>
+
     <!--About-Section-->
-    <div class="about-us-section">
+    <section id="about-us-section" class="about-us-section">
         <div class="about-us-container">
             <div class="about-us-container-image">
-                <img id = "about-us-image" src = "Images/tyler-clemmensen-c7Gay8ttJS0-unsplash.jpg">
+                <img id="about-us-image" src="Images/tyler-clemmensen-c7Gay8ttJS0-unsplash.jpg" alt="Car detailing process" class="img-fluid">
             </div>
             <div class="about-us-textbox">
                 <h1>About Garcia's Detailing</h1>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                     commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -63,7 +83,8 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
+
     <!--Social Media-->
     <section class="social-media-page">
         <div class="section-header">
@@ -76,92 +97,130 @@
             <!-- Add more social media links as needed -->
         </div>
     </section>
-    <!--Veiw Service-->
-    <section class="service">
+
+    <!--View Services-->
+    <section id="services-section" class="service">
         <div class="service-header">
-            <h1>Our Services</h1>
+            <h2>Our Services</h2>
         </div>
         <div class="service-grid-container">
             <div class="service-grid-item1">
-                <img id = "top-left-image" src = "Images/noah-boyer-TLaEVVWB6yU-unsplash.jpg">
+                <div class="service-image-container">
+                    <img id="top-left-image" src="Images/noah-boyer-TLaEVVWB6yU-unsplash.jpg" alt="Hand wash service" class="img-fluid">
+                </div>
                 <div class="service-grid-textbox">
-                    <h1>Hand Wash</h1>
+                    <h3>Hand Wash</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Our thorough hand wash service ensures every inch of your vehicle's exterior 
+                        receives careful attention. Using premium products and techniques, we remove dirt, 
+                        grime, and contaminants without damaging your paint.
                     </p>
+                    <div class="service-price">Starting at $49.99</div>
                 </div>
             </div>
             <div class="service-grid-item1">
-                <img id = "top-right-image" src = "Images/jorgen-hendriksen-HsB4t2NvtLo-unsplash.jpg">
+                <div class="service-image-container">
+                    <img id="top-right-image" src="Images/jorgen-hendriksen-HsB4t2NvtLo-unsplash.jpg" alt="Interior detailing" class="img-fluid">
+                </div>
                 <div class="service-grid-textbox">
-                    <h1>Interior Detail</h1>
+                    <h3>Interior Detail</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Our interior detailing restores your vehicle's cabin to showroom condition. 
+                        We thoroughly clean all surfaces, condition leather, shampoo carpets and upholstery, 
+                        and eliminate odors for a fresh, pristine interior.
                     </p>
+                    <div class="service-price">Starting at $129.99</div>
                 </div>
             </div>
             <div class="service-grid-item1">
-                <img id = "bottom-left-image" src = "Images/nick-fewings-Hf-UoMSx6R0-unsplash.jpg">
+                <div class="service-image-container">
+                    <img id="bottom-left-image" src="Images/nick-fewings-Hf-UoMSx6R0-unsplash.jpg" alt="Ceramic coating application" class="img-fluid">
+                </div>
                 <div class="service-grid-textbox">
-                    <h1>Ceramic Coating</h1>
+                    <h3>Ceramic Coating</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Our ceramic coating provides long-lasting protection for your vehicle's paint. 
+                        This advanced treatment creates a hydrophobic barrier that repels water, 
+                        prevents contaminants, and maintains a brilliant shine for years.
                     </p>
+                    <div class="service-price">Starting at $599.99</div>
                 </div>
             </div>
             <div class="service-grid-item1">
-                <img id = "bottom-right-image" src = "Images/redcharlie-mugDbuNnbd0-unsplash.jpg">
+                <div class="service-image-container">
+                    <img id="bottom-right-image" src="Images/redcharlie-mugDbuNnbd0-unsplash.jpg" alt="Paint correction process" class="img-fluid">
+                </div>
                 <div class="service-grid-textbox">
-                    <h1>Paint Correction</h1>
+                    <h3>Paint Correction</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Our paint correction service removes swirls, scratches, and imperfections 
+                        from your vehicle's paint. Using professional-grade tools and techniques, 
+                        we restore your paint to a flawless, mirror-like finish.
                     </p>
+                    <div class="service-price">Starting at $349.99</div>
                 </div>
             </div>
         </div>
     </section>
+
     <!--Our Work-->
-    <section class="work-display">
+    <section id="our-work" class="work-display">
         <div class="work-display-header">
-            <h1>Our Work</h1>
+            <h2>Our Work</h2>
         </div>
         <div class="grid-container">
            <div class="grid-item-1">
-                <img src ="Images/alex-ware-LXUwvRGqsiA-unsplash.jpg" height="800" width="600">
+                <img src="Images/alex-ware-LXUwvRGqsiA-unsplash.jpg" alt="Detailed luxury car" class="img-fluid">
            </div>
-           <div class="grid-item-2"><img src ="Images/adrian-newell-SBabfTStqjQ-unsplash.jpg" height="500" width="700">
+           <div class="grid-item-2">
+                <img src="Images/adrian-newell-SBabfTStqjQ-unsplash.jpg" alt="Car detailing result" class="img-fluid">
            </div>
-           <div class="grid-item-3"><img src ="Images/fourfour-G3Irirjfl8s-unsplash.jpg" height="500" width="700">
+           <div class="grid-item-3">
+                <img src="Images/fourfour-G3Irirjfl8s-unsplash.jpg" alt="Professional car detailing" class="img-fluid">
            </div>
-           <div class="grid-item-4"><img src ="Images/jonathan-cooper-UJlbdyfod-I-unsplash.jpg" height="500" width="700">
+           <div class="grid-item-4">
+                <img src="Images/jonathan-cooper-UJlbdyfod-I-unsplash.jpg" alt="Vehicle transformation" class="img-fluid">
            </div>
-           <div class="grid-item-5"><img src ="Images/jeffrey-balfus-K2cNNeH9fvU-unsplash.jpg" height="500" width="700">
+           <div class="grid-item-5">
+                <img src="Images/jeffrey-balfus-K2cNNeH9fvU-unsplash.jpg" alt="Detailing showcase" class="img-fluid">
            </div>
         </div>
     </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Transform Your Vehicle?</h2>
+            <p>Schedule your appointment today and experience our premium detailing services.</p>
+            <a href="contact-us.html" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section id="counter-section" class="counter-section">
+        <span class="counter" data-count="500"></span>
+    </section>
+
     <!--Footer-->
-    <div class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img id="footer_logo" src="Images/image12.png" style="width: 150px; height: auto;">
+                <img id="footer_logo" src="Images/image12.png" alt="Garcia's Detailing Logo" style="width: 150px; height: auto;">
             </div>
             <div class="footer-links">
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Support</a></li>
+                    <li><a href="contact-us.html">Support</a></li>
                 </ul>
             </div>
+            <div class="footer-contact">
+                <p>Email: info@garciasdetailing.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>&copy; 2025 Garcia's Detailing. All rights reserved.</p>
+            </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

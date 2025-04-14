@@ -3,40 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="appointment.css">
-    <link rel="stylesheet" href="appointment.js">
-    <title>Book an Appointment</title>
+    <script src="main.js" defer></script>
+    <script src="appointment.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <title>Book an Appointment - Garcia's Detailing</title>
 </head>
 <body>
-    <!--Navigation Link-->
-    <section class="header">
-        <div class="logo">
-            <li style="width: 150px;"><img id="header_logo" src="Images/image12.png" style="width: 100%; height: auto;"></li>
+    <!-- Navigation Link -->
+    <header class="header appointment-header">
+        <div class="header-overlay"></div>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img id="header_logo" src="Images/image12.png" alt="Garcia's Detailing Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <nav class="nav-links" id="nav-links" data-visible="false">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about-us-section" class="nav-link">About Us</a></li>
+                    <li><a href="index.html#services-section" class="nav-link">Services</a></li>
+                    <li><a href="index.html#our-work" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li><a href="/contact-us.html">Contact Us</a></li>
-            </ul>
+        <div class="hero-content">
+            <h1>Book Your Appointment</h1>
+            <p>Schedule your premium detailing service</p>
+        </div>
+    </header>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="appointment-info">
+                        <h2>Schedule Your Service</h2>
+                        <p>Ready to transform your vehicle? Complete the form to book your premium detailing service. Our team will confirm your appointment within 24 hours.</p>
+                        
+                        <div class="appointment-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Select Your Service</h3>
+                                    <p>Choose from our range of professional detailing packages.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Pick a Date & Time</h3>
+                                    <p>Select your preferred appointment date and time.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Provide Vehicle Details</h3>
+                                    <p>Tell us about your vehicle for a customized service.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Confirmation</h3>
+                                    <p>Receive your appointment confirmation via email or text.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="promo-box">
+                            <h3><i class="fas fa-tag"></i> Special Offer</h3>
+                            <p>Book online and receive a <strong>10% discount</strong> on your first detailing service!</p>
+                            <p class="promo-code">Use code: <span>FIRSTDETAIL</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="appointment-form">
+                        <h2>Booking Details</h2>
+                        
+                        <form id="bookingForm">
+                            <div class="form-section">
+                                <h3>Personal Information</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" id="firstName" name="firstName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" id="lastName" name="lastName" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Vehicle Information</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="make">Make</label>
+                                            <input type="text" id="make" name="make" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="model">Model</label>
+                                            <input type="text" id="model" name="model" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="year">Year</label>
+                                            <input type="number" id="year" name="year" min="1900" max="2030" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="color">Color</label>
+                                            <input type="text" id="color" name="color">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="vehicleType">Vehicle Type</label>
+                                    <select id="vehicleType" name="vehicleType" required>
+                                        <option value="">Select vehicle type</option>
+                                        <option value="sedan">Sedan</option>
+                                        <option value="suv">SUV/Crossover</option>
+                                        <option value="truck">Truck</option>
+                                        <option value="luxury">Luxury Vehicle</option>
+                                        <option value="sports">Sports Car</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Service Details</h3>
+                                <div class="form-group">
+                                    <label for="service">Select Service</label>
+                                    <select id="service" name="service" required>
+                                        <option value="">Choose a detailing package</option>
+                                        <option value="basic-wash">Basic Hand Wash ($49.99)</option>
+                                        <option value="interior-detail">Interior Detail ($129.99)</option>
+                                        <option value="exterior-detail">Exterior Detail ($149.99)</option>
+                                        <option value="full-detail">Full Detail Package ($249.99)</option>
+                                        <option value="ceramic-coating">Ceramic Coating ($599.99)</option>
+                                        <option value="paint-correction">Paint Correction ($349.99)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="addons">Add-on Services</label>
+                                    <div class="checkbox-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="engine-detail" name="addons" value="engine-detail">
+                                            <label for="engine-detail">Engine Bay Detail (+$49.99)</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="headlight-restoration" name="addons" value="headlight-restoration">
+                                            <label for="headlight-restoration">Headlight Restoration (+$39.99)</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="odor-elimination" name="addons" value="odor-elimination">
+                                            <label for="odor-elimination">Odor Elimination (+$29.99)</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="leather-treatment" name="addons" value="leather-treatment">
+                                            <label for="leather-treatment">Leather Treatment (+$59.99)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Appointment Time</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="appointmentDate">Preferred Date</label>
+                                            <input type="text" id="appointmentDate" name="date" class="date-picker" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="appointmentTime">Preferred Time</label>
+                                            <select id="appointmentTime" name="time" required>
+                                                <option value="">Select a time</option>
+                                                <option value="09:00">9:00 AM</option>
+                                                <option value="10:00">10:00 AM</option>
+                                                <option value="11:00">11:00 AM</option>
+                                                <option value="12:00">12:00 PM</option>
+                                                <option value="13:00">1:00 PM</option>
+                                                <option value="14:00">2:00 PM</option>
+                                                <option value="15:00">3:00 PM</option>
+                                                <option value="16:00">4:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="notes">Special Requests or Notes</label>
+                                    <textarea id="notes" name="notes" rows="3"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group promo-code-input">
+                                <label for="promoCode">Promo Code (if applicable)</label>
+                                <input type="text" id="promoCode" name="promoCode">
+                            </div>
+                            
+                            <div class="booking-summary">
+                                <h3>Booking Summary</h3>
+                                <div id="serviceSummary" class="summary-item">
+                                    <span class="label">Service:</span>
+                                    <span class="value">-</span>
+                                </div>
+                                <div id="addonsSummary" class="summary-item">
+                                    <span class="label">Add-ons:</span>
+                                    <span class="value">-</span>
+                                </div>
+                                <div id="totalPrice" class="summary-item total">
+                                    <span class="label">Total:</span>
+                                    <span class="value">$0.00</span>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Book Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="footer">
+    
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Garcia's Detailing?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Professional Service</h3>
+                        <p>Our team of certified detailers treats every vehicle with the utmost care and attention to detail.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h3>Premium Products</h3>
+                        <p>We use only the highest quality, eco-friendly products to ensure the best results for your vehicle.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Satisfaction Guaranteed</h3>
+                        <p>If you're not completely satisfied with our service, we'll make it right - guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img id="footer_logo" src="Images/image12.png" style="width: 150px; height: auto;">
+                <img id="footer_logo" src="Images/image12.png" alt="Garcia's Detailing Logo">
             </div>
             <div class="footer-links">
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Support</a></li>
+                    <li><a href="contact-us.html">Support</a></li>
                 </ul>
             </div>
+            <div class="footer-contact">
+                <p>Email: info@garciasdetailing.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>&copy; 2025 Garcia's Detailing. All rights reserved.</p>
+            </div>
         </div>
-    </section>
-    
+    </footer>
 </body>
 </html>

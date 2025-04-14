@@ -15,6 +15,8 @@
 }
 /*------------------------------------------------Navigation Links*--------------------*/
 .nav-links {
+    display: flex;
+    align-items: center;
     text-align: center;
     margin-top: 0px; 
 }
@@ -23,14 +25,125 @@
     color: white;
     display: flex;
     justify-content: center; 
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
 }
 .nav-links ul li {
-    margin: 125px; 
+    margin: 0;
     font-size: 40px;
 }
 .nav-links ul li:hover {
     text-decoration: underline;
 }
+.nav-link {
+    color: var(--text-color, #fff);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0.5rem 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color, #fff);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.cta-nav {
+    background-color: var(--accent-color, #444);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-nav:hover {
+    background-color: #555;
+}
+
+.cta-nav:hover::after {
+    width: 0;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-color, #fff);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 6rem 2rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.35s ease-out;
+        z-index: 1000;
+    }
+    
+    .nav-links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        width: 100%;
+        display: block;
+    }
+}
+
 /*-------------------------------------------------------------Contact Us*/
 .contact-us {
     background-image: url(Images/j-z-CXqzqEq2sGU-unsplash.jpg);
@@ -110,4 +223,345 @@ button:hover {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+}
+
+/* Contact Page Specific Styles */
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #333;
+    --accent-color: #444;
+    --text-color: #fff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+/* Header adjustments for contact page */
+.contact-header {
+    background-image: url(Images/fourfour-G3Irirjfl8s-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    color: var(--text-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.header-cta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.phone-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.phone-cta:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-3px);
+    color: var(--text-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+    color: var(--text-color);
+}
+
+/* Add fixed navigation for the contact page */
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-fixed.show {
+    transform: translateY(0);
+}
+
+/* Active link styling for Contact page */
+.nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    bottom: 0;
+    left: 0;
+}
+
+.page-title {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: var(--text-color);
+    padding: var(--spacing-lg) 0;
+}
+
+.page-title h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-title p {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--light-gray);
+    padding: var(--spacing-lg) 0;
+    color: var(--dark-gray);
+}
+
+.contact-info, .contact-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md);
+    height: 100%;
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--spacing-xs);
+}
+
+.contact-info > p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    color: #666;
+}
+
+.contact-details {
+    margin-top: var(--spacing-md);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: var(--spacing-sm);
+    margin-top: 5px;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.contact-item p {
+    margin: 0;
+    color: #666;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Form Styles */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: var(--spacing-sm);
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Map Section */
+.map-section {
+    height: 450px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .contact-info, .contact-form {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-form {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .header-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .phone-cta, .cta-button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .contact-header {
+        min-height: 70vh;
+    }
 }

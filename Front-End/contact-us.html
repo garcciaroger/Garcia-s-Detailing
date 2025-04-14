@@ -3,63 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact-us.css">
-    <script src ="contact-us.js"></script>
-    <script src = "contact-us.js"></script>
-    <title>Contact Us</title>
+    <script src="main.js" defer></script>
+    <script src="contact-us.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Contact Us - Garcia's Detailing</title>
 </head>
 <body>
-    <!--Navigation Link-->
-    <section class="header">
-        <div class="logo">
-            <li style="width: 150px;"><img id="header_logo" src="Images/image12.png" style="width: 100%; height: auto;"></li>
+    <!-- Navigation Link -->
+    <header class="header contact-header">
+        <div class="header-overlay"></div>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img id="header_logo" src="Images/image12.png" alt="Garcia's Detailing Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <nav class="nav-links" id="nav-links" data-visible="false">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about-us-section" class="nav-link">About Us</a></li>
+                    <li><a href="index.html#services-section" class="nav-link">Services</a></li>
+                    <li><a href="index.html#our-work" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact-us.html" class="nav-link active cta-nav">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li><a href="/contact-us.html">Contact Us</a></li>
-            </ul>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch for premium auto detailing services</p>
+            <div class="header-cta">
+                <a href="tel:5551234567" class="phone-cta"><i class="fas fa-phone"></i> (555) 123-4567</a>
+                <a href="#contactForm" class="cta-button">Message Us</a>
+            </div>
         </div>
-    </div>
-     <!--Contact Us-->
-     <div class="contact-us">
-        <div class="contact-us-textbox">
-            <h1>Have Any Questions? Contact us</h1>
-            <form action = "\send_email" method="post">
-                <label for="email">Form:</label>
-                <input type="email" name="from" id="from">
+    </header>
 
-                <label for="to">to:</label>
-                <input type="email" name="to" id="to">
-
-                <label for="subject">Subject:</label>
-                <input type="text" name="subject" id="subject">
-
-                <label for="message">Message:</label>
-                <textarea type="message" name="message"></textarea>
-
-                <input type="submit" value="Send">
-
-            </form>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h2>Reach Out to Us</h2>
+                        <p>Have questions about our services or want to schedule an appointment? Fill out the form and we'll get back to you as soon as possible.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Our Location</h3>
+                                    <p>123 Detail Street, Automobile City, CA 90210</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Phone Number</h3>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email Address</h3>
+                                    <p>info@garciasdetailing.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Business Hours</h3>
+                                    <p>Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        
+                        <form id="contactForm" action="/send_email" method="post">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="from" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a Service</option>
+                                    <option value="Hand Wash">Hand Wash</option>
+                                    <option value="Interior Detail">Interior Detail</option>
+                                    <option value="Ceramic Coating">Ceramic Coating</option>
+                                    <option value="Paint Correction">Paint Correction</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <!--Footer-->
-    <div class="footer">
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130390376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img id="footer_logo" src="Images/image12.png" style="width: 150px; height: auto;">
+                <img id="footer_logo" src="Images/image12.png" alt="Garcia's Detailing Logo" style="width: 150px; height: auto;">
             </div>
             <div class="footer-links">
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Support</a></li>
+                    <li><a href="contact-us.html">Support</a></li>
                 </ul>
             </div>
+            <div class="footer-contact">
+                <p>Email: info@garciasdetailing.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>&copy; 2025 Garcia's Detailing. All rights reserved.</p>
+            </div>
         </div>
-    </section>
+    </footer>
 </body>
 </html>

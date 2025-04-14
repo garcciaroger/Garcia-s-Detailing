@@ -64,3 +64,321 @@
     color: #fff;
     font-weight: bold;
 }
+
+/* Appointment Page Styles */
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #333;
+    --accent-color: #444;
+    --text-color: #fff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333;
+    --form-bg: #fff;
+    --form-text: #222;
+    --input-border: #ddd;
+    --form-shadow: rgba(0, 0, 0, 0.1);
+    --success-color: #28a745;
+}
+
+/* Header Adjustments */
+.appointment-header {
+    background-image: url(Images/fourfour-G3Irirjfl8s-unsplash.jpg);
+    min-height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Appointment Section */
+.appointment-section {
+    background-color: var(--light-gray);
+    padding: 5rem 0;
+}
+
+.appointment-info {
+    background-color: var(--form-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--form-shadow);
+    padding: 2rem;
+    height: 100%;
+    color: var(--form-text);
+}
+
+.appointment-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.appointment-info > p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Appointment Steps */
+.appointment-steps {
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.step-content p {
+    color: #666;
+    margin: 0;
+}
+
+/* Promo Box */
+.promo-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.promo-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.promo-box i {
+    color: var(--accent-color);
+}
+
+.promo-code {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.promo-code span {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+}
+
+/* Appointment Form */
+.appointment-form {
+    background-color: var(--form-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--form-shadow);
+    padding: 2rem;
+    height: 100%;
+    margin-bottom: 2rem;
+    color: var(--form-text);
+}
+
+.appointment-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--input-border);
+}
+
+.form-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(68, 68, 68, 0.2);
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.date-picker {
+    background-color: var(--form-bg);
+    cursor: pointer;
+}
+
+/* Booking Summary */
+.booking-summary {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.booking-summary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.summary-item.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-bottom: none;
+    margin-top: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.feature {
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .appointment-info {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature {
+        margin-bottom: 2rem;
+    }
+    
+    .appointment-section {
+        padding: 3rem 0;
+    }
+}
